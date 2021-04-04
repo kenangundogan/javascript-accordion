@@ -37,7 +37,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             itemHead.forEach(i => {
                 let itemWrapper = i.closest("ul");
                 let itemWrapperEvent = itemWrapper.getAttribute("data-accordion-event");
-                console.log(itemWrapper.getAttribute("data-accordion-transition"));
                 let itemWrapperTransition = itemWrapper.getAttribute("data-accordion-transition") == null ? "0" : itemWrapper.getAttribute("data-accordion-transition");
                 i.addEventListener(itemWrapperEvent == null ? "click" : itemWrapperEvent, function () {
                     accordionItemFunc(itemWrapper, itemWrapperTransition, i);
