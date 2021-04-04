@@ -2,10 +2,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function accordionWrapperFunc(itemWrapper) {
         itemWrapper.querySelectorAll("li").forEach(i => {
-            i.querySelector(".body").style.height = "";
-            setTimeout(() => {
-                i.classList.remove("show");
-            }, 150);
+            if (i.className == "show") {
+                i.querySelector(".body").style.height = "";
+                setTimeout(() => {
+                    i.classList.remove("show");
+                }, 300);
+            }
         });
     }
 
@@ -14,19 +16,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var activeItem = item.className == "show";
         var itemBody = item.querySelector(".body");
         var itemBodyWrapper = item.querySelector(".wrapper");
-        item.style.height = "";
         if (!activeItem) {
             accordionWrapperFunc(itemWrapper);
-            setTimeout(() => {
-                item.classList.add("show");
-                var itemHeight = itemBodyWrapper.offsetHeight + "px";
-                itemBody.style.height = itemHeight;
-            }, 150);
+            item.classList.add("show");
+            var itemHeight = itemBodyWrapper.offsetHeight + "px";
+            itemBody.style.height = itemHeight;
         } else {
             itemBody.style.height = "";
             setTimeout(() => {
                 item.classList.remove("show");
-            }, 150);
+            }, 300);
         }
     }
 
@@ -36,7 +35,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             itemHead.forEach(i => {
                 let itemWrapper = i.closest("ul");
                 let itemWrapperEvent = itemWrapper.getAttribute("data-accordion-event");
-                console.log(itemWrapperEvent);
                 i.addEventListener(itemWrapperEvent == null ? "click" : itemWrapperEvent, function () {
                     accordionItemFunc(itemWrapper, i);
                 })
