@@ -1,8 +1,7 @@
 ul{
     position: relative; width: 100%;
     li{
-        min-height: 40px;
-        overflow: hidden; transition: 300ms;
+        overflow: hidden; min-height: 70px; margin-bottom: 10px;
         &.show{
             background-color: $primary-color-light;
             .head{
@@ -32,7 +31,7 @@ ul{
         }
         .body{
             display: none; overflow: hidden;
-            height: 0; transition: ease 300ms;
+            height: 0; 
             .wrapper{
                 position:relative; overflow: hidden;
                 padding: 0px 20px 20px 60px;
