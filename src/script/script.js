@@ -1,41 +1,48 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
     function accordionWrapperFunc(itemWrapper) {
-        itemWrapper.querySelectorAll("li").forEach(k => {
-            k.style.height = "";
-            k.classList.remove("show");
+        itemWrapper.querySelectorAll("li").forEach(i => {
+            i.querySelector(".body").style.height = "";
+            setTimeout(() => {
+                i.classList.remove("show");
+            }, 150);
         });
     }
 
     function accordionItemFunc(itemWrapper, i) {
         var item = i.closest("li");
-        var itemHead = item.querySelector(".head");
-        var itemBody = item.querySelector(".body");
-        var itemHeight = itemBody.offsetHeight + itemHead.offsetHeight + "px";
         var activeItem = item.className == "show";
+        var itemBody = item.querySelector(".body");
+        var itemBodyWrapper = item.querySelector(".wrapper");
         item.style.height = "";
         if (!activeItem) {
             accordionWrapperFunc(itemWrapper);
-            item.style.height = itemHeight;
-            item.classList.add("show");
+            setTimeout(() => {
+                item.classList.add("show");
+                var itemHeight = itemBodyWrapper.offsetHeight + "px";
+                itemBody.style.height = itemHeight;
+            }, 150);
         } else {
-            item.style.height = "";
-            item.classList.remove("show");
+            itemBody.style.height = "";
+            setTimeout(() => {
+                item.classList.remove("show");
+            }, 150);
         }
     }
 
-    function accordionItemHeadFunc(params) {
+    function accordionFunc(params) {
         let itemHead = document.querySelectorAll(".javascript-accordion li .head");
         if (itemHead) {
             itemHead.forEach(i => {
                 let itemWrapper = i.closest("ul");
                 let itemWrapperEvent = itemWrapper.getAttribute("data-accordion-event");
-                i.addEventListener(itemWrapperEvent, function () {
+                console.log(itemWrapperEvent);
+                i.addEventListener(itemWrapperEvent == null ? "click" : itemWrapperEvent, function () {
                     accordionItemFunc(itemWrapper, i);
                 })
             });
         }
     }
 
-    accordionItemHeadFunc();
+    accordionFunc();
 });
