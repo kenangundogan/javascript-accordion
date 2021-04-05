@@ -11,6 +11,7 @@ element | string or object | click | id or class DOM element
 event | string |  | add event listener
 transition | int | 300ms | opening and closing animation speed
 activeItem | int |  | active item to be open at startup
+multipleTab | boolean | false | Multiple accordion tab can be open at a time.
 
 ## Usage example
 ```javascript
