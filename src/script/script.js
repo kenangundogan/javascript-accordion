@@ -1,8 +1,8 @@
 var Accordion = function (options) {
 
     var element = options.element;
-    var event = options.event;
-    var transition = options.transition;
+    var event = options.event == null ? "click" : options.event;
+    var transition = options.transition == null ? "300": options.transition;
     var activeItem = options.activeItem;
     var items = document.querySelectorAll(element + " .accordion-item");
 
