@@ -1,49 +1,47 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+var Accordion = function (options) {
+    var element = options.element;
+    var event = options.event;
+    var transition = options.transition;
+    var items = document.querySelectorAll(element + " .accordion-item");
 
-    function accordionWrapperFunc(itemWrapper, itemWrapperTransition) {
-        itemWrapper.querySelectorAll("li").forEach(i => {
-            if (i.className == "show") {
-                i.querySelector(".body").style.height = "";
+    items.forEach(item => {
+        var head, body, wrapper, active;
+        head = item.querySelector(".head");
+        body = item.querySelector(".body");
+        wrapper = item.querySelector(".wrapper");
+        head.addEventListener(event, function () {
+            item.classList.forEach(show => {
+                active = show == "show" ? show : "";
+            });
+
+            if (active) {
+                body.style.height = "";
                 setTimeout(() => {
-                    i.classList.remove("show");
-                    i.querySelector(".body").style = "";
-                }, itemWrapperTransition);
+                    item.classList.remove("show");
+                    body.style = "";
+                }, transition);
+            }
+            else {
+                itemsFunc(items, transition);
+                item.classList.add("show");
+                body.style.transition = transition + "ms";
+                body.style.height = wrapper.offsetHeight + "px";
             }
         });
-    }
 
-    function accordionItemFunc(itemWrapper, itemWrapperTransition, i) {
-        var item = i.closest("li");
-        var activeItem = item.className == "show";
-        var itemBody = item.querySelector(".body");
-        var itemBodyWrapper = item.querySelector(".wrapper");
-        if (!activeItem) {
-            accordionWrapperFunc(itemWrapper, itemWrapperTransition);
-            item.classList.add("show");
-            itemBody.style.transition = itemWrapperTransition + "ms";
-            itemBody.style.height = itemBodyWrapper.offsetHeight + "px";
-        } else {
-            itemBody.style.height = "";
-            setTimeout(() => {
-                item.classList.remove("show");
-                itemBody.style = "";
-            }, itemWrapperTransition);
-        }
-    }
-
-    function accordionFunc() {
-        let itemHead = document.querySelectorAll(".javascript-accordion li .head");
-        if (itemHead) {
-            itemHead.forEach(i => {
-                let itemWrapper = i.closest("ul");
-                let itemWrapperEvent = itemWrapper.getAttribute("data-accordion-event");
-                let itemWrapperTransition = itemWrapper.getAttribute("data-accordion-transition") == null ? "0" : itemWrapper.getAttribute("data-accordion-transition");
-                i.addEventListener(itemWrapperEvent == null ? "click" : itemWrapperEvent, function () {
-                    accordionItemFunc(itemWrapper, itemWrapperTransition, i);
-                })
+        function itemsFunc(items, transition) {
+            items.forEach(item => {
+                var asd = item.classList;
+                asd.forEach(show => {
+                    if (show == "show") {
+                        item.querySelector(".body").style.height = "";
+                        setTimeout(() => {
+                            item.classList.remove("show");
+                            item.querySelector(".body").style = "";
+                        }, transition);
+                    }
+                });
             });
         }
-    }
-
-    accordionFunc();
-});
+    });
+}
