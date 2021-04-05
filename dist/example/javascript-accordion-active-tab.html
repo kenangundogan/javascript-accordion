@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Accordion</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +18,7 @@
             <div class="title">Javascript Accordion</div>
             <div class="description">
                 Accordions are useful when you want to toggle between hiding and showing large amount of content.
-                <span class="info">All Options</span>
+                <span class="info">Active Tab</span>
             </div>
         </div>
 
@@ -109,10 +108,7 @@
         <script>
             var accordion = new Accordion({
                 element: ".accordion-container",
-                click: "click",
-                activeTab: 2,
-                transiton: 300,
-                multipleTab: true
+                activeTab: 2
             });
         </script>
     </div>
