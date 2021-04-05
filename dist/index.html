@@ -22,8 +22,8 @@
             <div class="description">the accordion is a graphical control element comprising a vertically stacked list
                 of items, such as labels or thumbnails.</div>
         </div>
-        <ul class="javascript-accordion" data-accordion-event="click" data-accordion-transition="300">
-            <li>
+        <ul class="accordion-container">
+            <li class="accordion-item">
                 <div class="head">
                     <i></i>
                     <p>why this term ?</p>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="accordion-item">
                 <div class="head">
                     <i></i>
                     <p>when to use accordion components ?</p>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="accordion-item">
                 <div class="head">
                     <i></i>
                     <p>How can it be defined ?</p>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="accordion-item">
                 <div class="head">
                     <i></i>
                     <p>when to use accordion ?</p>
@@ -104,6 +104,14 @@
                 </div>
             </li>
         </ul>
+
+        <script>
+            var accordion = new Accordion({
+                element: ".accordion-container",
+                event: "click",
+                transition: 300
+            });
+        </script>
     </div>
 </body>
 
