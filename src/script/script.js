@@ -2,7 +2,7 @@ var Accordion = function (options) {
     var element = options.element;
     var event = options.event == null ? "click" : options.event;
     var transition = options.transition == null ? "300": options.transition;
-    var activeItem = options.activeItem;
+    var activeTab = options.activeTab;
     var multipleTab = options.multipleTab;
     var items = document.querySelectorAll(element + " .accordion-item");
 
@@ -11,7 +11,7 @@ var Accordion = function (options) {
         head = item.querySelector(".head");
         body = item.querySelector(".body");
         wrapper = item.querySelector(".wrapper");
-        activeItemFunc(item, key, activeItem, body, wrapper);
+        activeTabFunc(item, key, activeTab, body, wrapper);
         head.addEventListener(event, function () {
             item.classList.forEach(show => {
                 active = show == "show" ? show : "";
@@ -48,8 +48,8 @@ var Accordion = function (options) {
         });
     }
 
-    function activeItemFunc(item, key, activeItem, body, wrapper) {
-        if (activeItem == (key + 1)) {
+    function activeTabFunc(item, key, activeTab, body, wrapper) {
+        if (activeTab == (key + 1)) {
             item.classList.add("show");
             body.style.transition = transition + "ms";
             body.style.height = wrapper.offsetHeight + "px";
