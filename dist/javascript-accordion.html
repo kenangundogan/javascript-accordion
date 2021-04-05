@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Accordion</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto&display=swap"
-        rel="stylesheet">
-    <title>Javascript Accordion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="head">
             <div class="title">Javascript Accordion</div>
-            <div class="description">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
+            <div class="description">
+                Accordions are useful when you want to toggle between hiding and showing large amount of content.
+                <span class="info">All Options</span>
+            </div>
         </div>
 
         <ul class="accordion-container">
@@ -108,10 +109,10 @@
         <script>
             var accordion = new Accordion({
                 element: ".accordion-container",
-                event: "click",
-                transition: 300,
-                activeItem: 2,
-                multipleTab: false
+                click: "click",
+                activeTab: 2,
+                transiton: 300,
+                multipleTab: true
             });
         </script>
     </div>
