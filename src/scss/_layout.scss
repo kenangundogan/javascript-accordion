@@ -25,6 +25,10 @@ body{
         .description{
             font-family: $font-family-sans-serif;
             font-size: 14px;
+            .info{
+                background-color: $primary-color-base;
+                font-weight: bold; text-decoration: underline;
+            }
         }
     }
 }

@@ -2,16 +2,13 @@ ul{
     position: relative; width: 100%;
     li{
         overflow: hidden; min-height: 70px; margin-bottom: 10px;
+        border: dashed 1px #dedede; border-radius: 5px;
         &.show{
             background-color: $primary-color-light;
             .head{
-                i{
-                    &::before{content: "-";}
-                }
+                i{&::before{content: "-";}}
             }
-            .body{
-                display: block;
-            }
+            .body{display: block;}
         }
         .head{
             display: flex; align-items: center;
