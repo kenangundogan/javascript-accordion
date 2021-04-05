@@ -1,7 +1,7 @@
 ## Javascript Accordion
 Javascript accordion - tiny and simple.
 
-![Javascript Accordion](https://raw.githubusercontent.com/kenangundogan/javascript-accodion/main/asset/javascript-accordion.png)
+![Javascript Accordion](https://raw.githubusercontent.com/kenangundogan/javascript-accodion/main/asset/javascript-accordion-cover.png)
 
 ## Options
 Option | Type | Default | Description
