@@ -1,7 +1,13 @@
+/*!
+ * Javascript Accodiron 1.0.0
+ * Copyright 2021 Kenan Gündoğan
+ * Released under the MIT License
+ */
+
 var Accordion = function (options) {
     var element = options.element;
     var event = options.event == null ? "click" : options.event;
-    var transition = options.transition == null ? "300": options.transition;
+    var transition = options.transition == null ? "300" : options.transition;
     var activeTab = options.activeTab;
     var multipleTab = options.multipleTab;
     var items = document.querySelectorAll(element + " .accordion-item");
@@ -25,7 +31,7 @@ var Accordion = function (options) {
                 }, transition);
             }
             else {
-                if(multipleTab != true){itemsFunc(items, transition);}
+                if (multipleTab != true) { itemsFunc(items, transition); }
                 item.classList.add("show");
                 body.style.transition = transition + "ms";
                 body.style.height = wrapper.offsetHeight + "px";
