@@ -4,6 +4,7 @@ var Accordion = function (options) {
     var event = options.event == null ? "click" : options.event;
     var transition = options.transition == null ? "300": options.transition;
     var activeItem = options.activeItem;
+    var multipleTab = options.multipleTab;
     var items = document.querySelectorAll(element + " .accordion-item");
 
     items.forEach((item, key) => {
@@ -25,7 +26,7 @@ var Accordion = function (options) {
                 }, transition);
             }
             else {
-                itemsFunc(items, transition);
+                if(multipleTab != true){itemsFunc(items, transition);}
                 item.classList.add("show");
                 body.style.transition = transition + "ms";
                 body.style.height = wrapper.offsetHeight + "px";
