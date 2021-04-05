@@ -14,6 +14,7 @@ activeTab | int |  | active item to be open at startup
 multipleTab | boolean | false | Multiple accordion tab can be open at a time.
 
 ## Usage example
+### Script
 ```javascript
 var accordion = new Accordion({
     element: ".accordion-container",
@@ -22,6 +23,23 @@ var accordion = new Accordion({
     activeTab: 2,
     multipleTab: true
 });
+```
+
+### View
+```html
+<ul class="accordion-container">
+    <li class="accordion-item">
+        <div class="head">
+            ...
+        </div>
+        <div class="body">
+            <div class="wrapper">
+                ...
+            </div>
+        </div>
+    </li>
+    ...
+</ul>
 ```
 
 ## Copyright and license
