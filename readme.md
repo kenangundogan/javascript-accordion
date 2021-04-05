@@ -1,5 +1,6 @@
 ## Javascript Accordion
 Javascript accordion - tiny and simple.
+Accordions are useful when you want to toggle between hiding and showing large amount of content.
 
 ![Javascript Accordion](https://raw.githubusercontent.com/kenangundogan/javascript-accodion/main/asset/javascript-accordion-cover.png)
 
