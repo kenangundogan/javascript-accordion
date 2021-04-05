@@ -1,14 +1,19 @@
 var Accordion = function (options) {
+
+
     var element = options.element;
     var event = options.event;
     var transition = options.transition;
+    var activeItem = options.activeItem;
     var items = document.querySelectorAll(element + " .accordion-item");
+    
 
-    items.forEach(item => {
+    items.forEach((item, key) => {
         var head, body, wrapper, active;
         head = item.querySelector(".head");
         body = item.querySelector(".body");
         wrapper = item.querySelector(".wrapper");
+        activeItemFunc(item, key, activeItem, body, wrapper);
         head.addEventListener(event, function () {
             item.classList.forEach(show => {
                 active = show == "show" ? show : "";
@@ -44,4 +49,12 @@ var Accordion = function (options) {
             });
         }
     });
+
+    function activeItemFunc(item, key, activeItem, body, wrapper) {
+        if(activeItem == (key + 1)){
+            item.classList.add("show");
+            body.style.transition = transition + "ms";
+            body.style.height = wrapper.offsetHeight + "px";
+        }
+    }
 }
