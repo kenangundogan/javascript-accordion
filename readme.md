@@ -19,7 +19,7 @@ var accordion = new Accordion({
     element: ".accordion-container",
     event: "click",
     transition: 300,
-    activeItem: 2,
+    activeTab: 2,
     multipleTab: true
 });
 ```
