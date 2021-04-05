@@ -1,5 +1,5 @@
 /*!
- * Javascript Accodiron 1.0.0
+ * Javascript Accordion 1.0.0
  * Copyright 2021 Kenan Gündoğan
  * Released under the MIT License
  */
