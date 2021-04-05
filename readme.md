@@ -1,4 +1,5 @@
 ## Javascript Accordion
+Javascript accordion - tiny and simple.
 
 ## Usage example
 ```javascript
