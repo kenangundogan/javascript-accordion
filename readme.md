@@ -5,13 +5,13 @@ Accordions are useful when you want to toggle between hiding and showing large a
 ![Javascript Accordion](https://raw.githubusercontent.com/kenangundogan/javascript-accodion/main/asset/javascript-accordion-cover.png)
 
 ## Options
-Option | Type | Default | Description
------- | ---- | ------- | -----------
-element | string or object |  | id or class DOM element
-event | string | click | add event listener
-transition | int | 300ms | opening and closing animation speed
-activeTab | int |  | active item to be open at startup
-multipleTab | boolean | false | multiple accordion tab can be open at a time.
+Option | Type | Default | Description | Example
+------ | ---- | ------- | ----------- | -----------
+element | string or object |  | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
+event | string | click | add event listener | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
+transition | int | 300ms | opening and closing animation speed | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
+activeTab | int |  | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion-active-tab)
+multipleTab | boolean | false | multiple accordion tab can be open at a time. | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-multiple-tab)
 
 ## Usage example
 ### Script
