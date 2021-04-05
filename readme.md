@@ -1,6 +1,14 @@
 ## Javascript Accordion
 Javascript accordion - tiny and simple.
 
+## Options
+Option | Type | Default | Description
+------ | ---- | ------- | -----------
+element | string or object | click | id or class DOM element
+event | string |  | add event listener
+transition | int | 300ms | opening and closing animation speed
+activeItem | int |  | active item to be open at startup
+
 ## Usage example
 ```javascript
 var accordion = new Accordion({
