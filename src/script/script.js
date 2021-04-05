@@ -1,5 +1,4 @@
 var Accordion = function (options) {
-
     var element = options.element;
     var event = options.event == null ? "click" : options.event;
     var transition = options.transition == null ? "300": options.transition;
