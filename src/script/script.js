@@ -5,12 +5,12 @@
  */
 
 var Accordion = function (options) {
-    var element = options.element;
-    var event = options.event == null ? "click" : options.event;
-    var transition = options.transition == null ? "300" : options.transition;
-    var activeTab = options.activeTab;
-    var multipleTab = options.multipleTab;
-    var items = document.querySelectorAll(element + " .accordion-item");
+    var element = options.element,
+        event = options.event == null ? "click" : options.event,
+        transition = options.transition == null ? "300" : options.transition,
+        activeTab = options.activeTab,
+        multipleTab = options.multipleTab,
+        items = document.querySelectorAll(element + " .accordion-item");
 
     items.forEach((item, key) => {
         var head, body, wrapper, active;
