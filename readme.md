@@ -7,11 +7,11 @@ Accordions are useful when you want to toggle between hiding and showing large a
 ## Options
 Option | Type | Default | Description | Example
 ------ | ---- | ------- | ----------- | -----------
-element | string or object |  | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
-event | string | click | add event listener | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
-transition | int | 300ms | opening and closing animation speed | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion)
-activeTab | int |  | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion-active-tab)
-multipleTab | boolean | false | multiple accordion tab can be open at a time. | [Example](https://kenangundogan.github.io/javascript-accodion/javascript-accordion-multiple-tab)
+element | string or object |  | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-accordion)
+event | string | click | add event listener | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-accordion)
+transition | int | 300ms | opening and closing animation speed | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-accordion)
+activeTab | int |  | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-accordion-active-tab)
+multipleTab | boolean | false | multiple accordion tab can be open at a time. | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-accordion-multiple-tab)
 
 ## Usage example
 ### Script
