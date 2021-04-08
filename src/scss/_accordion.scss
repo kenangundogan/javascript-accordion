@@ -1,6 +1,6 @@
-ul{
+.accordion-container{
     position: relative; width: 100%;
-    li{
+    .accordion-item{
         overflow: hidden; min-height: 70px; margin-bottom: 10px;
         border: dashed 1px #dedede; border-radius: 5px;
         &.show{
