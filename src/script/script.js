@@ -4,8 +4,8 @@
  * Released under the MIT License
  */
 
-var Accordion = function (options) {
-    var element = options.element,
+const Accordion = function (options) {
+    const element = options.element,
         event = options.event == null ? "click" : options.event,
         transition = options.transition == null ? "300" : options.transition,
         activeTab = options.activeTab,
@@ -13,12 +13,12 @@ var Accordion = function (options) {
         items = document.querySelectorAll(element + " .accordion-item");
 
     items.forEach((item, key) => {
-        var head, body, wrapper, active;
+        let head, body, wrapper, active;
         head = item.querySelector(".head");
         body = item.querySelector(".body");
         wrapper = item.querySelector(".wrapper");
         activeTabFunc(item, key, activeTab, body, wrapper);
-        head.addEventListener(event, function () {
+        head.addEventListener(event, () => {
             item.classList.forEach(show => {
                 active = show == "show" ? show : "";
             });
@@ -33,8 +33,8 @@ var Accordion = function (options) {
             else {
                 if (multipleTab != true) { itemsFunc(items, transition); }
                 item.classList.add("show");
-                body.style.transition = transition + "ms";
-                body.style.height = wrapper.offsetHeight + "px";
+                body.style.transition = `${transition}ms`;
+                body.style.height = `${wrapper.offsetHeight}px`;
             }
         });
 
@@ -57,8 +57,10 @@ var Accordion = function (options) {
     function activeTabFunc(item, key, activeTab, body, wrapper) {
         if (activeTab == (key + 1)) {
             item.classList.add("show");
-            body.style.transition = transition + "ms";
-            body.style.height = wrapper.offsetHeight + "px";
+            body.style.transition = `${transition}ms`;
+            body.style.height = `${wrapper.offsetHeight}px`;
         }
     }
 }
+
+window.Accordion = Accordion;
